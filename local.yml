@@ -1,0 +1,40 @@
+version: '3'
+
+volumes:
+  planaday_developer_test_local_postgres_data: {}
+  planaday_developer_test_local_postgres_data_backups: {}
+
+services:
+  django:
+    build:
+      context: .
+      dockerfile: ./compose/local/django/Dockerfile
+    image: planaday_developer_test_local_django
+    container_name: planaday_developer_test_local_django
+    platform: linux/x86_64
+    depends_on:
+      - postgres
+    volumes:
+      - .:/app:z
+    env_file:
+      - ./.envs/.local/.django
+      - ./.envs/.local/.postgres
+    ports:
+      - "8002:8000"
+    command: /start
+
+  postgres:
+    build:
+      context: .
+      dockerfile: ./compose/production/postgres/Dockerfile
+    image: planaday_developer_test_production_postgres
+    container_name: planaday_developer_test_local_postgres
+    volumes:
+      - planaday_developer_test_local_postgres_data:/var/lib/postgresql/data:Z
+      - planaday_developer_test_local_postgres_data_backups:/backups:z
+    env_file:
+      - ./.envs/.local/.postgres
+
+  redis:
+    image: redis:5.0
+    container_name: planaday_developer_test_local_redis

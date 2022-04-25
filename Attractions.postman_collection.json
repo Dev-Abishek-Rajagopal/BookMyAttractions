@@ -1,0 +1,492 @@
+{
+	"info": {
+		"_postman_id": "1f7d0c95-6286-4ad2-a34d-16d08c0bcccc",
+		"name": "Attractions",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List Attractions",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Toronto Island",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "island in toronto",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "id",
+							"value": "6",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8002/attractions/attr/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8002",
+					"path": [
+						"attractions",
+						"attr",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Attractions",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "detriot",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "US CAN river",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8002/attractions/attr/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8002",
+					"path": [
+						"attractions",
+						"attr",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Attraction Detail View",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8002/attractions/attr/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8002",
+					"path": [
+						"attractions",
+						"attr",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Attraction",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Niagara",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Falls",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8002/attractions/attr/7/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8002",
+					"path": [
+						"attractions",
+						"attr",
+						"7",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Attraction",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8002/attractions/attr/9/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8002",
+					"path": [
+						"attractions",
+						"attr",
+						"9",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Inventory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8002/attractions/invent/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8002",
+					"path": [
+						"attractions",
+						"invent",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inventory Detail View",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Create Inventory",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "attraction",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "tickets",
+							"value": "65",
+							"type": "text"
+						},
+						{
+							"key": "remain_tickets",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "rate",
+							"value": "65",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8002/attractions/invent/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8002",
+					"path": [
+						"attractions",
+						"invent",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Inventory",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "attraction",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "tickets",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "rate",
+							"value": "65",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8002/attractions/invent/4/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8002",
+					"path": [
+						"attractions",
+						"invent",
+						"4",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Inventory",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8002/attractions/invent/5/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8002",
+					"path": [
+						"attractions",
+						"invent",
+						"5",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Bookings",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Generate Ticket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "attraction",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "noftickets",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "user",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8002/attractions/book/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8002",
+					"path": [
+						"attractions",
+						"book",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Booking",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8002/attractions/book/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8002",
+					"path": [
+						"attractions",
+						"book",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change Ticket Reservation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "reduce",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "pk",
+							"value": "10",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8002/attractions/editbook/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8002",
+					"path": [
+						"attractions",
+						"editbook",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Booking",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8002/attractions/book/5/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8002",
+					"path": [
+						"attractions",
+						"book",
+						"5",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

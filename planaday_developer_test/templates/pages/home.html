@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>The Planaday Development Test</h1>
+<br>
+  <br>
+<h2>Overview</h2>
+
+<p>This project is meant to be a way for us to not only see your coding skills, but also how approach an open ended problem,
+  and how you design a solution. This is not meant to take long, you should not spend more than 3 hours on this project.
+  This is an open ended problem that you could work on for years and continue
+to add features so please do not go crazy here.</p>
+
+<h2>The Problem</h2>
+<p>At Planaday we spend a lot of time integrating with different ticketing systems and booking engines in order to
+  increase our inventory of offerings for our system, These integrations are for things like show tickets,
+  tours, attraction, restaurant reservations etc. For this test we'd like to see how you would go about developing and
+  planning your own ticketing platform. You can update the <strong>attractions</strong> app in the <strong>planaday_developer_test</strong> directory.
+  Here you can add <strong>Models, Views, and Tests</strong> in order to build a basic booking engine.</p>
+
+  <p>The basic functionality of a booking engine is the following:</p>
+  <ol>
+  <li>List Attractions</li>
+  <li>Attractions may have different ticket types (Child, Adult, Student, General Admission, Front Row, etc)</li>
+  <li>Check ticket inventory of an attraction for a certain date</li>
+  <li>Reserve Tickets</li>
+  </ol>
+
+  <p>Some basic views for listing the Attractions, and viewing a single Attraction have already been created. You will need
+  to build the models and views needed in order to fulfill the basic functionality. You may chose to add any additional functionality
+  you can think of if time permits.</p>
+
+  <p>We do not require a frontend, we just want to see the Views and models, and any tests you can create to show your solution in action.
+    We will go through your code and test your apis manually through <strong>Postman</strong>, and run any automated tests you may create.
+  </p>
+
+  <h2>What we are looking for</h2>
+
+  <p>We are looking to see how you tackle an open ended problem, and implement your solution.
+    We appreciate any comments and tests that help us understand your approach better. Obviously we want to see some
+    good looking code as well, but we are realistic about the time we want you to allocate to the test
+    (we do not want to have you working on this for days),
+    and that the design and solution are also important parts of your submission.</p>
+
+
+  <h2>Things to keep in mind</h2>
+
+  <ul>
+    <li>Think of functionality that would make sense for searching and reserving tickets</li>
+    <li>In order to reserve tickets, you can just assign the customers name/email to the tickets</li>
+    <li>You may set your own parameters (number of tickets available etc)</li>
+    <li>Test Attractions have already been added to the docker database,
+      You can view their details from the `/attractions/` endpoint.
+      Think about how these different shows may require different features/parameters
+    </li>
+    <li>Remember we wont have any data you add to the database. If you would like us to use data you create,
+    please add a script in the `scripts` file that we can run to populate the database with your data.</li>
+    <li>We will play around with your API through POSTMAN</li>
+
+
+  </ul>
+
+  <h2>How to submit your solution</h2>
+<ul>
+<li>Don't fork this repository on Github or submit a pull request directly there, as that would make your solution
+  public for others to see. Instead, just clone the repository and work locally on it.</li>
+<li>When you're done, squash your work into a single commit and use `git format-patch` to generate a patch file.
+  Email the patch file to us as your work sample submission. If you prefer to provide a GitHub's private gist or even
+  do your work in a private repo and add us to it, that's also totally fine.</li>
+</ul>
+{% endblock %}
